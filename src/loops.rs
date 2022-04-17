@@ -1,0 +1,44 @@
+pub fn run() {
+    let mut count = 0;
+
+    // infinite loop
+    loop {
+        count += 1;
+        println!("Number : {}", count);
+        if count == 20 {
+            break;
+        }
+    }
+
+    // while loop (fizzbuz)
+    // divisible by 3 print fizz
+    // divisible by 5 print buzz
+    // divisible by 3 and 5 then fizzbuzz
+
+    count = 1;
+    while count <= 100 {
+        if count % 15 == 0 {
+            println!("fizzbuzz");
+        } else if count % 3 == 0 {
+            println!("fizz")
+        } else if count % 5 == 0 {
+            println!("buzz")
+        } else {
+            println!("{}", count);
+        }
+        count +=1;
+    }
+
+    // for Range
+    for count in 1..101 {
+        if count % 15 == 0 {
+            println!("fizzbuzz");
+        } else if count % 3 == 0 {
+            println!("fizz")
+        } else if count % 5 == 0 {
+            println!("buzz")
+        } else {
+            println!("{}", count);
+        }
+    }
+}
